@@ -1,18 +1,12 @@
-def hämta_tal():
-    while True:
-        try:
-            tal = float(input("Ange ett tal: "))
-            return tal
-        except ValueError:
-            print("Felaktig inmatning. Vänligen ange ett heltal.")
+while True:
 
-def dividera_med_tal():
-    while True:
-        tal = hämta_tal()
-        try:
-            resultat = f"100 / {tal} = {100 / tal:.2f}"
-            return resultat
-        except ZeroDivisionError:
-            print("Fel: Division med noll är inte tillåten. Försök igen.")
+   try:
+       tal = int(input("Ange ett tal: "))
+       print(f"100 / {tal} = {100 / tal:.2f}")
+       break
 
-print(dividera_med_tal())
+   except ValueError:
+       print("Felaktig inmatning. Ange ett heltal.")
+
+   except ZeroDivisionError:
+       print("Fel: Division med noll är inte tillåten. Försök igen.")
